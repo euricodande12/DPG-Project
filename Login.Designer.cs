@@ -36,6 +36,7 @@
             btnLogin = new Button();
             lblDontHaveAnAccount = new Label();
             llbSignUp = new LinkLabel();
+            chkShowPassword = new CheckBox();
             SuspendLayout();
             // 
             // lblLogin
@@ -86,6 +87,7 @@
             txtPassword.ForeColor = SystemColors.ControlDark;
             txtPassword.Location = new Point(27, 171);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(241, 27);
             txtPassword.TabIndex = 4;
             // 
@@ -94,7 +96,7 @@
             btnLogin.BackColor = SystemColors.ControlDarkDark;
             btnLogin.FlatStyle = FlatStyle.System;
             btnLogin.ForeColor = SystemColors.Control;
-            btnLogin.Location = new Point(27, 216);
+            btnLogin.Location = new Point(27, 246);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(241, 29);
             btnLogin.TabIndex = 5;
@@ -107,7 +109,7 @@
             lblDontHaveAnAccount.AutoSize = true;
             lblDontHaveAnAccount.Font = new Font("Bahnschrift Condensed", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDontHaveAnAccount.ForeColor = SystemColors.ControlDarkDark;
-            lblDontHaveAnAccount.Location = new Point(118, 261);
+            lblDontHaveAnAccount.Location = new Point(118, 291);
             lblDontHaveAnAccount.Name = "lblDontHaveAnAccount";
             lblDontHaveAnAccount.Size = new Size(105, 16);
             lblDontHaveAnAccount.TabIndex = 6;
@@ -119,7 +121,7 @@
             llbSignUp.AutoSize = true;
             llbSignUp.Font = new Font("Bahnschrift Condensed", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             llbSignUp.LinkColor = SystemColors.ControlDarkDark;
-            llbSignUp.Location = new Point(229, 261);
+            llbSignUp.Location = new Point(229, 291);
             llbSignUp.Name = "llbSignUp";
             llbSignUp.Size = new Size(39, 16);
             llbSignUp.TabIndex = 7;
@@ -127,11 +129,23 @@
             llbSignUp.Text = "Sign Up";
             llbSignUp.LinkClicked += llbSignUp_LinkClicked;
             // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(159, 209);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(112, 23);
+            chkShowPassword.TabIndex = 8;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(6F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(294, 308);
+            ClientSize = new Size(294, 334);
+            Controls.Add(chkShowPassword);
             Controls.Add(llbSignUp);
             Controls.Add(lblDontHaveAnAccount);
             Controls.Add(btnLogin);
@@ -160,5 +174,6 @@
         private Button btnLogin;
         private Label lblDontHaveAnAccount;
         private LinkLabel llbSignUp;
+        private CheckBox chkShowPassword;
     }
 }

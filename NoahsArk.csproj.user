@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="ClassList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateOrUpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DropOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DropOffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditParentOrChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -8,6 +23,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ParentChildList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PickUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PickUpList.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

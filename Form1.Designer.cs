@@ -40,6 +40,7 @@
             btnSignUp = new Button();
             lblAlreadyHasAnAccount = new Label();
             llbLogin = new LinkLabel();
+            chkShowPassword = new CheckBox();
             SuspendLayout();
             // 
             // txtFirstName
@@ -141,7 +142,7 @@
             btnSignUp.FlatStyle = FlatStyle.System;
             btnSignUp.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp.ForeColor = SystemColors.Control;
-            btnSignUp.Location = new Point(22, 216);
+            btnSignUp.Location = new Point(22, 258);
             btnSignUp.Name = "btnSignUp";
             btnSignUp.Size = new Size(289, 30);
             btnSignUp.TabIndex = 9;
@@ -154,7 +155,7 @@
             lblAlreadyHasAnAccount.AutoSize = true;
             lblAlreadyHasAnAccount.Font = new Font("Bahnschrift Condensed", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblAlreadyHasAnAccount.ForeColor = SystemColors.ControlDarkDark;
-            lblAlreadyHasAnAccount.Location = new Point(163, 264);
+            lblAlreadyHasAnAccount.Location = new Point(163, 307);
             lblAlreadyHasAnAccount.Name = "lblAlreadyHasAnAccount";
             lblAlreadyHasAnAccount.Size = new Size(112, 16);
             lblAlreadyHasAnAccount.TabIndex = 10;
@@ -166,7 +167,7 @@
             llbLogin.AutoSize = true;
             llbLogin.Font = new Font("Bahnschrift Condensed", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             llbLogin.LinkColor = SystemColors.ControlDarkDark;
-            llbLogin.Location = new Point(279, 265);
+            llbLogin.Location = new Point(279, 308);
             llbLogin.Name = "llbLogin";
             llbLogin.Size = new Size(30, 16);
             llbLogin.TabIndex = 11;
@@ -174,11 +175,23 @@
             llbLogin.Text = "Login";
             llbLogin.LinkClicked += llbLogin_LinkClicked;
             // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(180, 212);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(129, 27);
+            chkShowPassword.TabIndex = 12;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(332, 302);
+            ClientSize = new Size(332, 347);
+            Controls.Add(chkShowPassword);
             Controls.Add(llbLogin);
             Controls.Add(lblAlreadyHasAnAccount);
             Controls.Add(btnSignUp);
@@ -215,5 +228,6 @@
         private Button btnSignUp;
         private Label lblAlreadyHasAnAccount;
         private LinkLabel llbLogin;
+        private CheckBox chkShowPassword;
     }
 }

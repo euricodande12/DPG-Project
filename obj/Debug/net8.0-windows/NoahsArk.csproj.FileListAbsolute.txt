@@ -52,3 +52,10 @@ C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.csproj.AssemblyR
 C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.csproj.Up2Date
 C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.Login.resources
 C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.ParentChildList.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.ClassList.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.CreateOrUpdateClass.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.DropOff.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.DropOffList.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.EditParentOrChild.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.PickUp.resources
+C:\Users\euric\Music\NoahsArk\obj\Debug\net8.0-windows\NoahsArk.PickUpList.resources

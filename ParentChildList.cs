@@ -15,8 +15,9 @@ namespace NoahsArk
         public String username;
         public ParentChildList(string username)
         {
-            InitializeComponent();
             this.username = username;
+            InitializeComponent();
+            DatabaseMethods.LoadDataIntoADataGridView(tblParentsAndChildren, "spDisplayParentsAndChildrenDetails");
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -29,6 +30,58 @@ namespace NoahsArk
             DatabaseMethods.ExecuteStoredProcedure("spLogout", parameters);
             this.Hide();
             new Login().Show();
+        }
+
+        private void btnCreateOrEditClass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CreateOrUpdateClass(username).Show();
+        }
+
+        private void btnClassList_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ClassList(username).Show();
+        }
+
+        private void btnDropOff_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DropOff(username).Show();
+        }
+
+        private void ParentChildList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@userName", username }
+            };
+
+            DatabaseMethods.ExecuteStoredProcedure("spLogout", parameters);
+        }
+
+        private void btnPickUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PickUp(username).Show();
+        }
+
+        private void btnDropOffList_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DropOffList(username).Show();
+        }
+
+        private void btnPickUpList_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PickUpList(username).Show();
+        }
+
+        private void btnEditParent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new EditParentOrChild(username).Show();
         }
     }
 }

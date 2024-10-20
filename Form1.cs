@@ -9,10 +9,10 @@ namespace NoahsArk
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            String firstName = txtFirstName.Text;
-            String lastName = txtLastName.Text;
-            String username = txtUsername.Text;
-            String password = txtPassword.Text;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
@@ -29,6 +29,18 @@ namespace NoahsArk
         {
             this.Hide();
             new Login().Show();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked == true)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }

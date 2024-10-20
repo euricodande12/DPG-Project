@@ -25,8 +25,8 @@ namespace NoahsArk
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String username = txtUsername.Text;
-            String password = txtPassword.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
@@ -37,10 +37,22 @@ namespace NoahsArk
             // Execute the stored procedure
             int isAuthenticated = DatabaseMethods.ExecuteStoredProcedureWithOutput("spLogin", parameters);
 
-            if(isAuthenticated == 1)
+            if (isAuthenticated == 1)
             {
                 this.Hide();
                 new ParentChildList(username).Show();
+            }
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked == true)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
             }
         }
     }
